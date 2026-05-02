@@ -4,82 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hafsa R | Data Analyst</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             margin: 0;
-            background-color: #f9f9f9;
+            background: #f4f6f8;
             color: #333;
         }
+
         header {
-            background: #111;
+            background: linear-gradient(135deg, #111, #2c3e50);
             color: white;
-            padding: 50px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
-        section {
-            padding: 40px 20px;
-            max-width: 900px;
-            margin: auto;
-        }
-        h1, h2 {
+
+        header h1 {
+            font-size: 38px;
             margin-bottom: 10px;
         }
+
+        header p {
+            margin: 6px 0;
+            opacity: 0.95;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 950px;
+            margin: auto;
+        }
+
+        h2 {
+            border-left: 4px solid #0077cc;
+            padding-left: 12px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-top: 20px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
         .project {
             background: white;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 25px;
+            margin-top: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease;
         }
+
+        .project:hover {
+            transform: translateY(-5px);
+        }
+
         img {
             width: 100%;
             border-radius: 10px;
             margin-top: 15px;
         }
-        a {
-            color: #0077cc;
+
+        .btn {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 10px 16px;
+            background: #0077cc;
+            color: white;
+            border-radius: 6px;
             text-decoration: none;
+            font-weight: 500;
         }
-        a:hover {
-            text-decoration: underline;
+
+        .btn:hover {
+            background: #005fa3;
         }
+
         footer {
             text-align: center;
-            padding: 20px;
+            padding: 25px;
             background: #111;
             color: white;
+            margin-top: 40px;
         }
     </style>
 </head>
+
 <body>
 
 <header>
     <h1>Hafsa R</h1>
-    <p>Data Analyst | SQL & Power BI</p>
+    <p><strong>Data Analyst | SQL & Power BI</strong></p>
     <p>I help businesses turn raw data into clear insights, track performance, and identify growth opportunities.</p>
+    <p><strong>Helping small businesses make better decisions using data.</strong></p>
 </header>
 
 <section>
     <h2>About Me</h2>
-    <p>
-        I am a data analyst focused on solving real-world business problems using SQL and Power BI.
-        I work with messy, raw data, transform it into structured insights, and build dashboards that help businesses track performance and make better decisions.
-    </p>
-    <p>
-        I have hands-on experience analyzing multi-branch sales data, identifying revenue trends, and delivering actionable recommendations for growth and efficiency.
-    </p>
+    <div class="card">
+        <p>
+            I am a data analyst focused on solving real-world business problems using SQL and Power BI.
+            I work with messy, raw data, transform it into structured insights, and build dashboards that help businesses track performance and make better decisions.
+        </p>
+        <p>
+            I have hands-on experience analyzing multi-branch sales data, identifying revenue trends, and delivering actionable recommendations for growth and efficiency.
+        </p>
+    </div>
 </section>
 
 <section>
     <h2>Services</h2>
-    <ul>
-        <li>Data cleaning and preparation (messy business data)</li>
-        <li>Sales and performance analysis</li>
-        <li>Interactive Power BI dashboards</li>
-        <li>Business insights and recommendations</li>
-    </ul>
-    <p><strong>Available for freelance projects.</strong></p>
+    <div class="card">
+        <ul>
+            <li>Data cleaning and preparation (messy business data)</li>
+            <li>Sales and performance analysis</li>
+            <li>Interactive Power BI dashboards</li>
+            <li>Business insights and recommendations</li>
+        </ul>
+        <p><strong>Available for freelance projects.</strong></p>
+    </div>
 </section>
 
 <section>
@@ -96,19 +151,19 @@
 
         <img src="Dashboard.PNG" alt="Sales Dashboard Preview">
 
-        <p>
-            <a href="https://github.com/Noorafathima09/Sales-Performance-Analysis-Dashboard-Spare-Parts-Business-SQL-Power-BI" target="_blank">
-                View Full Project on GitHub
-            </a>
-        </p>
+        <a class="btn" href="https://github.com/Noorafathima09/Sales-Performance-Analysis-Dashboard-Spare-Parts-Business-SQL-Power-BI" target="_blank">
+            View Full Project
+        </a>
     </div>
 
 </section>
 
 <section>
     <h2>Contact</h2>
-    <p>If you need help with data analysis or dashboards, feel free to reach out.</p>
-    <p><strong>Email:</strong> hafsashafeek9@gmail.com</p>
+    <div class="card">
+        <p>If you need help with data analysis or dashboards, feel free to reach out.</p>
+        <p><strong>Email:</strong> hafsashafeek9@gmail.com</p>
+    </div>
 </section>
 
 <footer>
@@ -117,3 +172,4 @@
 
 </body>
 </html>
+
