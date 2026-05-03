@@ -9,76 +9,93 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    background: linear-gradient(to right, #eef2f3, #f9fbfd);
-    color: #2c3e50;
+    background: #f5f7fb;
+    color: #2d3436;
 }
 
+/* NAVBAR */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+}
+
+nav h3 {
+    margin: 0;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+/* HERO */
 header {
-    background: linear-gradient(135deg, #1f2937, #3b82f6);
+    background: linear-gradient(135deg, #3b82f6, #6366f1);
     color: white;
-    padding: 90px 20px;
+    padding: 100px 20px;
     text-align: center;
 }
 
 header h1 {
-    font-size: 40px;
+    font-size: 42px;
     margin-bottom: 10px;
 }
 
 header p {
-    margin: 6px 0;
-    opacity: 0.95;
+    margin: 8px 0;
 }
 
+/* SECTIONS */
 section {
-    padding: 60px 20px;
-    max-width: 950px;
+    max-width: 1000px;
     margin: auto;
+    padding: 70px 20px;
 }
 
 h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    position: relative;
+    margin-bottom: 25px;
 }
 
-h2::after {
-    content: "";
-    width: 50px;
-    height: 3px;
-    background: #3b82f6;
-    display: block;
-    margin-top: 8px;
-    border-radius: 2px;
-}
-
+/* CARD */
 .card {
     background: white;
-    padding: 28px;
+    padding: 30px;
     border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    margin-top: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
 }
 
-ul {
-    padding-left: 20px;
+/* SERVICES GRID */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
 }
 
-li {
-    margin-bottom: 10px;
+.service-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
+/* PROJECT */
 .project {
     background: white;
-    padding: 28px;
-    margin-top: 25px;
+    padding: 30px;
     border-radius: 14px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: all 0.25s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.3s;
 }
 
 .project:hover {
-    transform: translateY(-6px);
+    transform: translateY(-5px);
 }
 
 img {
@@ -87,6 +104,7 @@ img {
     margin-top: 15px;
 }
 
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 15px;
@@ -95,81 +113,95 @@ img {
     color: white;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 500;
-    transition: background 0.2s ease;
 }
 
 .btn:hover {
     background: #2563eb;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
-    padding: 25px;
-    background: #1f2937;
+    padding: 30px;
+    background: #111827;
     color: white;
-    margin-top: 50px;
 }
 </style>
 </head>
 
 <body>
 
+<nav>
+    <h3>Hafsa R</h3>
+    <div>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
 <header>
-    <h1>Hafsa R</h1>
-    <p><strong>Data Analyst | SQL & Power BI</strong></p>
-    <p>I help businesses turn raw data into clear insights, track performance, and identify growth opportunities.</p>
-    <p><strong>Helping small businesses make better decisions using data.</strong></p>
+    <h1>Data Analyst</h1>
+    <p>SQL • Power BI • Business Insights</p>
+    <p>I help businesses understand their data, track performance, and make better decisions.</p>
 </header>
 
-<section>
+<section id="about">
     <h2>About Me</h2>
     <div class="card">
         <p>
-            I am a data analyst focused on solving real-world business problems using SQL and Power BI.
-            I work with messy, raw data, transform it into structured insights, and build dashboards that help businesses track performance and make better decisions.
+        I am a data analyst with hands-on experience working on real business data using SQL and Power BI.
+        I specialize in transforming raw, messy datasets into structured insights that help businesses make better decisions.
         </p>
+
         <p>
-            I have hands-on experience analyzing multi-branch sales data, identifying revenue trends, and delivering actionable recommendations for growth and efficiency.
+        In my recent project, I analyzed multi-branch spare parts sales data, cleaned and prepared the dataset using SQL,
+        and built an interactive Power BI dashboard to track revenue trends, branch performance, and product contribution.
+        </p>
+
+        <p>
+        Through this work, I developed a strong understanding of business metrics, data cleaning, and how to present insights
+        clearly through dashboards that are useful for decision-making.
         </p>
     </div>
 </section>
 
-<section>
+<section id="services">
     <h2>Services</h2>
-    <div class="card">
-        <ul>
-            <li>Data cleaning and preparation (messy business data)</li>
-            <li>Sales and performance analysis</li>
-            <li>Interactive Power BI dashboards</li>
-            <li>Business insights and recommendations</li>
-        </ul>
-        <p><strong>Available for freelance projects.</strong></p>
+
+    <div class="services">
+        <div class="service-box">Data Cleaning & Preparation</div>
+        <div class="service-box">Sales & Business Analysis</div>
+        <div class="service-box">Power BI Dashboards</div>
+        <div class="service-box">Business Insights & Reporting</div>
     </div>
+
+    <p><strong>Available for freelance projects</strong></p>
 </section>
 
-<section>
-    <h2>Project</h2>
+<section id="project">
+    <h2>Featured Project</h2>
 
     <div class="project">
-        <h3>Sales Performance Analysis & Dashboard | Spare Parts Business</h3>
+        <h3>Sales Performance Analysis & Dashboard</h3>
+
         <p>
-            End-to-end analysis of multi-branch spare parts sales data using SQL and Power BI.
-            This project identifies revenue drivers, branch performance gaps, and growth opportunities.
+        End-to-end analysis of spare parts sales data across multiple branches.
+        The project identifies revenue drivers, performance gaps, and opportunities for growth.
         </p>
-        <p><strong>Key Value:</strong> Helps businesses understand revenue patterns and improve decision-making.</p>
+
         <p><strong>Tools:</strong> SQL, Power BI</p>
 
-        <img src="Dashboard.PNG" alt="Sales Dashboard Preview">
+        <img src="Dashboard.PNG">
 
-        <a class="btn" href="https://github.com/Noorafathima09/Sales-Performance-Analysis-Dashboard-Spare-Parts-Business-SQL-Power-BI-" target="_blank">
-            View Full Project
+        <a class="btn" href="https://github.com/Noorafathima09/Sales-Performance-Analysis-Dashboard-Spare-Parts-Business-SQL-Power-BI" target="_blank">
+            View Project
         </a>
     </div>
-
 </section>
 
-<section>
+<section id="contact">
     <h2>Contact</h2>
     <div class="card">
         <p>If you need help with data analysis or dashboards, feel free to reach out.</p>
