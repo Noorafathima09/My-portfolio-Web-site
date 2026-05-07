@@ -1,3 +1,5 @@
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,214 +7,586 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hafsa R | Data Analyst</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-body {
-    font-family: 'Segoe UI', sans-serif;
+* {
     margin: 0;
-    background: #f5f7fb;
-    color: #2d3436;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+/* BACKGROUND EFFECT */
+body::before {
+    content: "";
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    background: rgba(168, 85, 247, 0.18);
+    filter: blur(120px);
+    top: -150px;
+    right: -100px;
+    z-index: -1;
+}
+
+body::after {
+    content: "";
+    position: fixed;
+    width: 450px;
+    height: 450px;
+    background: rgba(99, 102, 241, 0.15);
+    filter: blur(120px);
+    bottom: -150px;
+    left: -100px;
+    z-index: -1;
 }
 
 /* NAVBAR */
 nav {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 40px;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 9%;
+    backdrop-filter: blur(16px);
+    background: rgba(15, 23, 42, 0.75);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-nav h3 {
-    margin: 0;
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+.logo span {
+    color: #c084fc;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
 nav a {
-    margin-left: 20px;
     text-decoration: none;
-    color: #555;
+    color: #cbd5e1;
     font-weight: 500;
+    transition: 0.3s ease;
 }
 
-/* HERO */
-header {
-    background: linear-gradient(135deg, #3b82f6, #6366f1);
-    color: white;
-    padding: 100px 20px;
+nav a:hover {
+    color: #c084fc;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    padding: 100px 9%;
 }
 
-header h1 {
-    font-size: 42px;
-    margin-bottom: 10px;
+.hero-content {
+    max-width: 850px;
 }
 
-header p {
-    margin: 8px 0;
+.badge {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 999px;
+    background: rgba(192, 132, 252, 0.15);
+    border: 1px solid rgba(192,132,252,0.3);
+    color: #d8b4fe;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    font-size: 68px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.hero h1 span {
+    background: linear-gradient(135deg, #c084fc, #818cf8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #cbd5e1;
+    margin-bottom: 35px;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 14px 26px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #a855f7, #6366f1);
+    color: white;
+    box-shadow: 0 10px 30px rgba(168,85,247,0.35);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #e2e8f0;
+    background: rgba(255,255,255,0.04);
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.08);
 }
 
 /* SECTIONS */
 section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 70px 20px;
+    padding: 100px 9%;
 }
 
-h2 {
-    margin-bottom: 25px;
+.section-title {
+    font-size: 42px;
+    margin-bottom: 20px;
+    color: white;
 }
 
-/* CARD */
+.section-subtitle {
+    color: #94a3b8;
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+/* CARDS */
 .card {
-    background: white;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 24px;
+    padding: 40px;
+    backdrop-filter: blur(16px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
 }
 
-/* SERVICES GRID */
-.services {
+/* ABOUT */
+.about-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 30px;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
 
-.service-box {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+.stat-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 18px;
+    padding: 28px;
 }
 
-/* PROJECT */
-.project {
-    background: white;
+.stat-box h3 {
+    font-size: 34px;
+    color: #d8b4fe;
+    margin-bottom: 8px;
+}
+
+.stat-box p {
+    color: #cbd5e1;
+}
+
+/* SERVICES */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.service-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 22px;
     padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.project:hover {
-    transform: translateY(-5px);
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(192,132,252,0.4);
 }
 
-img {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 15px;
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 15px;
-    padding: 12px 18px;
-    background: #3b82f6;
+.service-card h3 {
+    margin-bottom: 14px;
     color: white;
-    border-radius: 8px;
-    text-decoration: none;
 }
 
-.btn:hover {
-    background: #2563eb;
+.service-card p {
+    color: #94a3b8;
+}
+
+/* PROJECT SECTION */
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.project-tag {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(129,140,248,0.15);
+    color: #c7d2fe;
+    font-size: 14px;
+}
+
+.project-card h3 {
+    font-size: 36px;
+    margin-bottom: 18px;
+    color: white;
+}
+
+.project-card p {
+    color: #cbd5e1;
+    margin-bottom: 18px;
+}
+
+.tools {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+}
+
+.tools span {
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    color: #e2e8f0;
+    font-size: 14px;
+}
+
+/* CONTACT */
+.contact-card {
+    text-align: center;
+}
+
+.contact-card p {
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.email {
+    font-size: 22px;
+    color: #d8b4fe;
+    font-weight: 600;
 }
 
 /* FOOTER */
 footer {
     text-align: center;
-    padding: 30px;
-    background: #111827;
-    color: white;
+    padding: 40px 20px;
+    color: #94a3b8;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* MOBILE */
+@media(max-width: 900px) {
+
+.hero h1 {
+    font-size: 48px;
+}
+
+.about-grid,
+.project-card {
+    grid-template-columns: 1fr;
+}
+
+nav {
+    flex-direction: column;
+    gap: 18px;
+}
+
+nav ul {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-buttons {
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+}
+
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
 <nav>
-    <h3>Hafsa R</h3>
-    <div>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#project">Project</a>
-        <a href="#contact">Contact</a>
-    </div>
+    <div class="logo">Hafsa<span>R</span></div>
+
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#project">Project</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
 </nav>
 
-<header>
-    <h1>Data Analyst</h1>
-    <p>SQL • Power BI • Business Insights</p>
-    <p>I help businesses understand their data, track performance, and make better decisions.</p>
-</header>
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
 
+        <div class="badge">
+            SQL • Power BI • Data Analysis
+        </div>
+
+        <h1>
+            Turning Raw Data Into
+            <span>Business Insights</span>
+        </h1>
+
+        <p>
+            Data Analyst focused on transforming messy business data into clear dashboards,
+            meaningful insights, and actionable decisions using SQL and Power BI.
+        </p>
+
+        <div class="hero-buttons">
+            <a class="btn btn-primary" href="#project">View Project</a>
+            <a class="btn btn-secondary" href="#contact">Contact Me</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ABOUT -->
 <section id="about">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>
-        I am a data analyst with hands-on experience working on real business data using SQL and Power BI.
-        I specialize in transforming raw, messy datasets into structured insights that help businesses make better decisions.
-        </p>
 
-        <p>
-        In my recent project, I analyzed multi-branch spare parts sales data, cleaned and prepared the dataset using SQL,
-        and built an interactive Power BI dashboard to track revenue trends, branch performance, and product contribution.
-        </p>
+    <h2 class="section-title">About Me</h2>
 
-        <p>
-        Through this work, I developed a strong understanding of business metrics, data cleaning, and how to present insights
-        clearly through dashboards that are useful for decision-making.
-        </p>
+    <p class="section-subtitle">
+        I work with real-world business data to uncover insights, improve visibility, and support better decision-making through structured analysis and dashboards.
+    </p>
+
+    <div class="about-grid">
+
+        <div class="card">
+            <p>
+                I am a self-driven Data Analyst with hands-on experience in SQL and Power BI, focused on solving real business problems using data.
+            </p>
+
+            <br>
+
+            <p>
+                My recent project involved analyzing multi-branch spare parts sales data from a real business environment. I cleaned and transformed messy datasets, prepared structured analysis, and built interactive dashboards to track revenue trends, branch performance, and product contribution.
+            </p>
+
+            <br>
+
+            <p>
+                Through this work, I developed practical experience in data cleaning, business analysis, dashboard design, and turning raw data into useful business insights.
+            </p>
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <h3>1+</h3>
+                <p>Real Business Project</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>70K+</h3>
+                <p>Rows Analyzed</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>SQL</h3>
+                <p>Data Cleaning & Analysis</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>Power BI</h3>
+                <p>Interactive Dashboards</p>
+            </div>
+
+        </div>
+
     </div>
+
 </section>
 
+<!-- SERVICES -->
 <section id="services">
-    <h2>Services</h2>
 
-    <div class="services">
-        <div class="service-box">Data Cleaning & Preparation</div>
-        <div class="service-box">Sales & Business Analysis</div>
-        <div class="service-box">Power BI Dashboards</div>
-        <div class="service-box">Business Insights & Reporting</div>
+    <h2 class="section-title">Services</h2>
+
+    <p class="section-subtitle">
+        Helping businesses organize data, track performance, and uncover insights through analysis and reporting.
+    </p>
+
+    <div class="services-grid">
+
+        <div class="service-card">
+            <h3>Data Cleaning</h3>
+            <p>
+                Cleaning and structuring messy datasets to make them ready for analysis and reporting.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Business Analysis</h3>
+            <p>
+                Identifying trends, performance gaps, and opportunities using business data.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Power BI Dashboards</h3>
+            <p>
+                Building interactive dashboards for tracking KPIs, revenue, and business performance.
+            </p>
+        </div>
+
+        <div class="service-card">
+            <h3>Reporting & Insights</h3>
+            <p>
+                Turning raw numbers into understandable insights that support decision-making.
+            </p>
+        </div>
+
     </div>
 
-    <p><strong>Available for freelance projects</strong></p>
 </section>
 
+<!-- PROJECT -->
 <section id="project">
-    <h2>Featured Project</h2>
 
-    <div class="project">
-        <h3>Sales Performance Analysis & Dashboard</h3>
+    <h2 class="section-title">Featured Project</h2>
+
+    <p class="section-subtitle">
+        End-to-end business analysis project using real spare parts sales data.
+    </p>
+
+    <div class="card project-card">
+
+        <div>
+            <img src="Dashboard.PNG" alt="Dashboard Preview">
+        </div>
+
+        <div>
+
+            <div class="project-tag">
+                Real Business Dataset
+            </div>
+
+            <h3>Sales Performance Analysis & Dashboard</h3>
+
+            <p>
+                Analyzed multi-branch spare parts sales data to uncover revenue trends, branch performance, and product contribution.
+            </p>
+
+            <p>
+                The project involved cleaning real-world messy business data using SQL and creating an interactive Power BI dashboard to support business decision-making.
+            </p>
+
+            <div class="tools">
+                <span>SQL</span>
+                <span>Power BI</span>
+                <span>Data Cleaning</span>
+                <span>Business Analysis</span>
+            </div>
+
+            <a class="btn btn-primary"
+            href="https://github.com/Noorafathima09/Sales-Performance-Analysis-Dashboard-Spare-Parts-Business-SQL-Power-BI"
+            target="_blank">
+            View Project
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+
+    <div class="card contact-card">
+
+        <h2 class="section-title">Let’s Connect</h2>
 
         <p>
-        End-to-end analysis of spare parts sales data across multiple branches.
-        The project identifies revenue drivers, performance gaps, and opportunities for growth.
+            Open to freelance opportunities, dashboard projects, and business data analysis work.
         </p>
 
-        <p><strong>Tools:</strong> SQL, Power BI</p>
+        <div class="email">
+            hafsashafeek9@gmail.com
+        </div>
 
-        <img src="Dashboard.PNG">
-
-        <a class="btn" href="https://github.com/Noorafathima09/Sales-Performance-Analysis-Dashboard-Spare-Parts-Business-SQL-Power-BI-" target="_blank">
-            View Project
-        </a>
     </div>
+
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
-    <div class="card">
-        <p>If you need help with data analysis or dashboards, feel free to reach out.</p>
-        <p><strong>Email:</strong> hafsashafeek9@gmail.com</p>
-    </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Hafsa R</p>
+    © 2026 Hafsa R • Data Analyst Portfolio
 </footer>
 
 </body>
 </html>
+```
 
